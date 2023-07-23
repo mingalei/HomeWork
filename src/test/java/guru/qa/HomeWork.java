@@ -17,6 +17,7 @@ public class HomeWork {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy="eager";
+
     }
 
 
@@ -24,6 +25,8 @@ public class HomeWork {
     void first()
     {
      open("/automation-practice-form");
+     executeJavaScript("$('#fixedban').remove()");
+     executeJavaScript("$('footer').remove()");
 
      $("#firstName").setValue("Aydar");
      $("#lastName").setValue("Mingaleev");
@@ -37,7 +40,7 @@ public class HomeWork {
      $("#subjectsInput").setValue("c");
      $("#react-select-2-option-4").click();
      $("label[for='hobbies-checkbox-3']").click();
-     $("#uploadPicture").uploadFile(new File("src/test/picture/01.jpg"));
+     $("#uploadPicture").uploadFromClasspath("01.jpg");
      $("#currentAddress").setValue("Kazan, Lenina st., 32");
      $("#state").click();
      $x("//div[text()='NCR']").click();
