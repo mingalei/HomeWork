@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class HomeWork2 {
+public class PracticeFormPageObject {
 
 
     @BeforeAll
