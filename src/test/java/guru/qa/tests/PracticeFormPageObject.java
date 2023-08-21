@@ -8,18 +8,18 @@ public class PracticeFormPageObject extends BeforeUrl {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    void first() {
+    void formPageObject() {
         registrationPage.openPage()
                 .setFirstName("Aydar")
                 .setLastname("Mingaleev")
                 .setUserEmail("name@example.com")
                 .setUserNumber("7564536345")
                 .selectGender("Male")
-                .selectBirthday("24", "July", "1996")
+                .birthday("24", "July", "1996")
                 .subjectSelect("Physics")
-                .adressSelect("Kazan, Lenina st., 32")
-                .hobbieSelect("Sports")
-                .pictureUpload("01.jpg")
+                .adress("Kazan, Lenina st., 32")
+                .hobbie("Sports")
+                .pictureUpload("023.png")
                 .selectState("NCR")
                 .selectCity("Noida")
                 .clickSubmit();
@@ -32,7 +32,7 @@ public class PracticeFormPageObject extends BeforeUrl {
                 .resultPage("Date of Birth", "24 July,1996")
                 .resultPage("Subjects", "Physics")
                 .resultPage("Hobbies", "Sports")
-                .resultPage("Picture", "01.jpg")
+                .resultPage("Picture", "023.png")
                 .resultPage("Address", "Kazan, Lenina st., 32")
                 .resultPage("State and City", "NCR Noida");
     }

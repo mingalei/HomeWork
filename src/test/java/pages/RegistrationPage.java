@@ -40,6 +40,7 @@ public class RegistrationPage {
         firstname.setValue(value);
         return this;
     }
+
     public RegistrationPage selectGender(String value) {
         genderSelect.$(byText(value)).click();
         return this;
@@ -73,15 +74,16 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage adressSelect(String value) {
+    public RegistrationPage adress(String value) {
         currentAddress.setValue(value);
         return this;
     }
 
-    public RegistrationPage hobbieSelect(String value) {
+    public RegistrationPage hobbie(String value) {
         selectHobbie.$(byText(value)).click();
         return this;
     }
+
     public RegistrationPage clickSubmit() {
         submitClick.click();
         return this;
@@ -92,7 +94,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage selectBirthday(String day, String month, String year) {
+    public RegistrationPage birthday(String day, String month, String year) {
         dateOfBirthInput.click();
         calendar.selectCalendar(day, month, year);
         return this;
@@ -108,6 +110,7 @@ public class RegistrationPage {
 
         return this;
     }
+
     public RegistrationPage resultPage(String checkField, String value) {
         tableField.$(byText(checkField)).parent().shouldHave(Condition.text(value));
 
