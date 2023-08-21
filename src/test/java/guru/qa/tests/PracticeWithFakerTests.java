@@ -17,7 +17,7 @@ public class PracticeWithFakerTests extends BeforeUrl {
                 .setFirstName(userFirstName)
                 .setLastname(userLastName)
                 .setUserEmail("name@example.com")
-          //      .setUserNumber("7564536345")
+                  .setUserNumber("7564536345")
                 .selectGender("Male")
                 .birthday("24", "July", "1996")
                 .subjectSelect("Physics")
