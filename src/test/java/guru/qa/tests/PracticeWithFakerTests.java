@@ -19,7 +19,7 @@ public class PracticeWithFakerTests extends BeforeUrl {
                 .setUserEmail("name@example.com")
                   //.setUserNumber("7564536345")
                 //.selectGender("Male")
-                .birthday("24", "July", "1996")
+               // .birthday("24", "July", "1996")
                 .subjectSelect("Physics")
                 .adress("Kazan, Lenina st., 32")
                 .hobbie("Sports")
