@@ -13,15 +13,21 @@ public class PracticeWithFakerTests extends BeforeUrl {
 
     @Test
     void formPageObject() {
-        registrationPage.openPage()
+        RegistrationPage registrationPage = this.registrationPage.openPage()
                 .setFirstName(userFirstName)
                 .setLastname(userLastName)
-                .setUserEmail("name@example.com")
+                .setUserNumber(mobileNumber)
+                .selectGender(userGender)
+                .setUserEmail(userEmail)
+                .birthday(setDay, setMonth, setYear)
+                .subjectSelect(setSubjects)
+                .hobbie(setHobbies)
+                .pictureUpload(setPicture)
                 //.setUserEmail("name@example.com")
-                  //.setUserNumber("7564536345")
+                //.setUserNumber("7564536345")
                 //.selectGender("Male")
-               // .birthday("24", "July", "1996")
-                .subjectSelect("Physics")
+                // .birthday("24", "July", "1996")
+
                 .adress("Kazan, Lenina st., 32")
                 .hobbie("Sports")
                 .pictureUpload("023.png")
@@ -29,7 +35,7 @@ public class PracticeWithFakerTests extends BeforeUrl {
                 .selectCity("Noida")
                 .clickSubmit();
 
-        registrationPage.checkModalTable()
+        this.registrationPage.checkModalTable()
                 .resultPage("Student Name", "Aydar Mingaleev")
                 .resultPage("Student Email", "name@example.com")
                 .resultPage("Gender", "Male")
